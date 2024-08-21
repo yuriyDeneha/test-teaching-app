@@ -1,0 +1,36 @@
+footer {
+  ul {
+    list-style-type: none;
+
+    li {
+      margin-top: 5px;
+    }
+
+    h3 {
+      color: grey;
+      font-size: 25px;
+    }
+  }
+
+  .row:nth-child(2) {
+    margin-bottom: 0;
+  }
+
+  .links p,
+  .links p a {
+    color: grey;
+    font-size: 16px;
+  }
+
+  p a:hover {
+    color: green;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 25px;
+    margin-bottom: 30px;
+  }
+}

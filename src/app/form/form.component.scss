@@ -1,0 +1,53 @@
+$green: #18d865;
+
+form {
+  padding: 20px;
+  font-size: 20px;
+}
+
+form {
+  padding: 20px;
+  font-size: 20px;
+  background-color: #333;
+  border-radius: 24px;
+  width: 50%;
+}
+
+form h2 {
+  margin-bottom: 20px;
+}
+
+button {
+  display: block;
+  margin: 20px 0;
+  background-color: $green;
+  padding: 12px 45px;
+  border: none;
+  border-radius: 22px;
+  font-size: 22px;
+}
+
+form button:hover {
+  background-color: #54ff99;
+  box-shadow: 0 0 30px $green;
+}
+
+form .colum {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+form .row {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+form input {
+  padding: 10px;
+  font-size: 20px;
+  background-color: black;
+  border-radius: 6px;
+  border: 1px solid #1e1e1e;
+}

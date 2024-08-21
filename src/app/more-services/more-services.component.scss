@@ -1,0 +1,47 @@
+$green: #18d865;
+
+.more-service {
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      display: block;
+      width: 40%;
+      height: 250px;
+      background-color: #333;
+      font-size: 30px;
+      margin: 10px;
+      padding: 20px 16px;
+      border-radius: 24px;
+      color: white;
+
+      &:nth-child(2) span {
+        background-color: red;
+      }
+    }
+  }
+}
+
+
+.more-service ul li .more-service ul li:nth-child(3) span {
+  background-color: rgb(0, 208, 255);
+}
+
+.more-service ul li:nth-child(4) span {
+  background-color: rgb(255, 0, 217);
+}
+
+.more-service ul li span {
+  background-color: $green;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.more-service ul li:hover {
+  background-color: #ff0000;
+}
