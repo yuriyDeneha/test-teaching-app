@@ -29,8 +29,11 @@ footer {
   .row {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
     font-size: 25px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
+
+    ul {
+      width: 25%;
+    }
   }
 }

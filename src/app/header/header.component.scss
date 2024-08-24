@@ -1,0 +1,26 @@
+header {
+  width: 100%;
+  color: white;
+  display: flex;
+  padding: 15px 0;
+  background-color: black;
+  align-items: center;
+  justify-content: space-between;
+
+  position: sticky;
+  z-index: 5;
+  top: 0;
+
+  img {
+    width: 180px
+  }
+
+  ul {
+    display: flex;
+    gap: 30px;
+    list-style-type: none;
+    font-size: 30px;
+    color: grey;
+    cursor: pointer;
+  }
+}

@@ -7,6 +7,7 @@ import { MoreServicesComponent } from './more-services/more-services.component';
 import { FormComponent } from './form/form.component';
 import { PowerfulComponent } from './powerful/powerful.component';
 import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { FooterComponent } from './footer/footer.component';
     MoreServicesComponent,
     FormComponent,
     PowerfulComponent,
-    FooterComponent
+    FooterComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

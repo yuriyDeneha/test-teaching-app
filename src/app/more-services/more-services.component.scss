@@ -5,14 +5,16 @@ $green: #18d865;
   ul {
     display: flex;
     flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 25px;
+    margin-bottom: 25px;
 
     li {
       display: block;
-      width: 40%;
+      width: calc(50% - 12.5px);
       height: 250px;
-      background-color: #333;
+      background-color: #1d1d1d;
       font-size: 30px;
-      margin: 10px;
       padding: 20px 16px;
       border-radius: 24px;
       color: white;

@@ -1,53 +1,10 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 $green: #18d865;
 
 
-.wrapper {
+.bg-color {
   background-color: black;
   color: white;
 }
-
-header {
-  background-color: black;
-  width: 100%;
-  color: white;
-  display: flex;
-
-  position: sticky;
-  z-index: 5;
-  top: 0;
-}
-
-header ul {
-  display: flex;
-  gap: 30px;
-  list-style-type: none;
-  font-size: 30px;
-  color: grey;
-  cursor: pointer;
-  position: relative;
-  top: 35px;
-  right: 20px;
-}
-
-section {
-  background-color: rgb(0, 0, 0);
-  min-height: 500px;
-  width: 100%;
-  color: white;
-}
-
-button.scale {
-  position: absolute;
-  bottom: 0;
-  right: 10px;
-}
-
 
 .messager {
   width: 58px;
@@ -58,44 +15,35 @@ button.scale {
   justify-content: center;
   align-items: center;
   position: fixed;
-  /* top: calc(100% - 58px);
-  left: calc(100% - 58px); */
   bottom: 16px;
   right: 16px;
+
+  img {
+    width: 60%;
+  }
 }
-
-.messager img {
-  width: 60%;
-}
-
-.green-warning p {
-  color: black;
-  text-align: center;
-  font-size: 16px;
-  padding: 0.75rem;
-  margin: 0;
-}
-
-
-footer {
-  background-color: black;
-  width: 100%;
-  color: white;
-}
-
-p {
-  color: #ffffff8c;
-  font-size: 30px;
-}
-
-.a-2 {}
-
-
-section {}
 
 .green-warning {
   background-color: $green;
   color: black;
   height: auto;
   min-height: auto;
+
+  p {
+    color: black;
+    text-align: center;
+    font-size: 16px;
+    padding: 0.75rem;
+    margin: 0;
+  }
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+app-form {
+  margin: 100px 0 200px;
+  display: block;
 }
