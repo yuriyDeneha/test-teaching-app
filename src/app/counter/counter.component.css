@@ -1,0 +1,10 @@
+.green {
+  padding: 10px 20px;
+  background-color: rgb(38, 38, 38);
+  color: white;
+  border-radius: 7px;
+  font-size: 22px;
+  border: none;
+  cursor: pointer;
+  margin: 20px;
+}

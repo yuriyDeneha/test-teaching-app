@@ -8,6 +8,7 @@ import { FormComponent } from './form/form.component';
 import { PowerfulComponent } from './powerful/powerful.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
+import { CounterComponent } from './counter/counter.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HeaderComponent } from './header/header.component';
     FormComponent,
     PowerfulComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    CounterComponent
   ],
   imports: [
     BrowserModule,
