@@ -47,3 +47,44 @@ app-form {
   margin: 100px 0 200px;
   display: block;
 }
+
+
+table {
+  font-size: 16px;
+  margin: 100px auto;
+  border-collapse: collapse;
+  border: none;
+
+  tr {
+
+    border-bottom: 1px solid rgb(168, 168, 168);
+
+    td,
+    th {
+      // border: 1px solid rgb(168, 168, 168);
+      padding: 15px;
+      border-right: 1px solid rgb(168, 168, 168);
+
+      &:last-child {
+        border: none;
+      }
+    }
+
+    &:last-child {
+      border: none;
+    }
+  }
+}
+
+.red {
+  background-color: red;
+  color: white;
+
+  &.round-first {
+    border-radius: 10px 10px 0 0;
+  }
+
+  &.round-last {
+    border-radius: 0 0 10px 10px;
+  }
+}
