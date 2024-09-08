@@ -10,6 +10,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { CounterComponent } from './counter/counter.component';
 import { FormsModule } from '@angular/forms';
+import { HeaderHoverBlockComponent } from './header-hover-block/header-hover-block.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { FormsModule } from '@angular/forms';
     PowerfulComponent,
     FooterComponent,
     HeaderComponent,
-    CounterComponent
+    CounterComponent,
+    HeaderHoverBlockComponent
   ],
   imports: [
     BrowserModule,

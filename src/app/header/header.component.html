@@ -7,9 +7,24 @@
 
     <ul>
       <li>Products</li>
-      <li>Solutions</li>
+      <li class="inner-block"
+        (mouseenter)="openBlock(0)"
+        (mouseleave)="hideBlock(0)">
+        <span>Solutions</span>
+        <app-header-hover-block
+          *ngIf="blocksOpen[0]"
+        ></app-header-hover-block>
+      </li>
+
       <li>Pricing</li>
-      <li>Resources</li>
+      <li class="inner-block"
+          (mouseenter)="openBlock(1)"
+          (mouseleave)="hideBlock(1)">
+        <span>Resources</span>
+        <app-header-hover-block
+          *ngIf="blocksOpen[1]"
+        ></app-header-hover-block>
+      </li>
     </ul>
 
 
@@ -23,3 +38,4 @@
       </button>
     </div>
   </header>
+

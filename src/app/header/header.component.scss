@@ -22,5 +22,19 @@ header {
     font-size: 30px;
     color: grey;
     cursor: pointer;
+
+    li {
+      &.inner-block {
+        position: relative;
+
+        app-header-hover-block {
+          position: absolute;
+          top: 100%;
+          left: 0;
+          box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+          z-index: 10;
+        }
+      }
+    }
   }
 }

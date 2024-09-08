@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
+  blocksOpen = [false, false];
+
+  openBlock(block: number) {
+    this.blocksOpen[block] = true;
+  }
+
+  hideBlock(block: number) {
+    this.blocksOpen[block] = false;
+  }
+
 }
