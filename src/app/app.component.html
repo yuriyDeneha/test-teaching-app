@@ -2,6 +2,48 @@
 
 
 
+<section class="input-types birthday">
+
+  <div class="wrapper">
+    <label>Enter your birthday:</label>
+    <input type="date" [(ngModel)]="birthday">
+
+    <button (click)="calculateAge()">Calculate</button>
+
+    <label>Your age is: </label>
+    <label> {{age}}</label>
+  </div>
+
+</section>
+
+<section class="input-types">
+  <div class="wrapper">
+    <label>Input type=text:</label>
+    <input type="text">
+
+    <label>Input type=number:</label>
+    <input type="number">
+
+    <label>Input type=password:</label>
+    <input type="password">
+
+    <label>Input type=email:</label>
+    <input type="email">
+
+    <label>Textarea:</label>
+    <textarea rows="5"></textarea>
+
+    <label>Input type=date:</label>
+    <input type="date">
+
+    <label>Input type=time:</label>
+    <input type="time">
+
+    <label>Input type=tel:</label>
+    <input type="tel">
+  </div>
+
+</section>
 
 <table>
   <thead>

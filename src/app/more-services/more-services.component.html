@@ -1,10 +1,15 @@
 <section class="more-service">
-  <h2>More services</h2>
+  <h2>{{pageObject.header}}</h2>
+
+  <a
+    *ngFor="let media of socialMedia"
+    class="icon icon-{{media.icon}}"
+    [href]="media.url"
+  >{{media.name}}</a>
 
   <ul>
-    <li><span></span>Saas</li>
-    <li><span></span>Profesional services</li>
-    <li><span></span>Construction</li>
-    <li><span></span>Other</li>
+    <li *ngFor="let item of pageObject.list">
+      <span></span> {{item}}
+    </li>
   </ul>
 </section>

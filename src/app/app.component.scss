@@ -48,6 +48,47 @@ app-form {
   display: block;
 }
 
+.input-types {
+  background-color: rgb(107, 37, 37);
+  min-height: 100vh;
+  padding: 10vh;
+
+  button {
+    display: block;
+    padding: 10px 15px;
+    border-radius: 15px;
+    font-size: 35px;
+    background-color: yellow;
+    margin-bottom: 20px;
+  }
+
+  &.birthday {
+    background-color: rgb(37, 107, 107);
+    min-height: 50vh;
+  }
+
+  .wrapper {
+    margin: 0 auto;
+    width: 500px;
+  }
+
+  input,
+  textarea {
+    background-color: white;
+    font-size: 35px;
+    margin: 10px 0 30px;
+    width: 100%;
+    display: block;
+    padding: 10px 15px;
+    border-radius: 15px;
+    font-weight: bold;
+  }
+
+  label {
+    color: white;
+    font-size: 35px;
+  }
+}
 
 table {
   font-size: 16px;
