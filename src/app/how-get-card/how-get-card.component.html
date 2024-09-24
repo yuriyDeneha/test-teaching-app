@@ -1,0 +1,9 @@
+<div class="container">
+    <h1>{{config.title}}</h1>
+    <div class="steps">
+      <app-list-item
+        *ngFor="let item of config.steps"
+        [item]="item"
+      ></app-list-item>
+    </div>
+</div>

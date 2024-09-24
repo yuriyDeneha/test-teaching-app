@@ -11,6 +11,8 @@ import { HeaderComponent } from './header/header.component';
 import { CounterComponent } from './counter/counter.component';
 import { FormsModule } from '@angular/forms';
 import { HeaderHoverBlockComponent } from './header-hover-block/header-hover-block.component';
+import { HowGetCardComponent } from './how-get-card/how-get-card.component';
+import { ListItemComponent } from './how-get-card/list-item/list-item.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { HeaderHoverBlockComponent } from './header-hover-block/header-hover-blo
     FooterComponent,
     HeaderComponent,
     CounterComponent,
-    HeaderHoverBlockComponent
+    HeaderHoverBlockComponent,
+    HowGetCardComponent,
+    ListItemComponent
   ],
   imports: [
     BrowserModule,

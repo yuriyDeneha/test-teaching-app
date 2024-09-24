@@ -1,0 +1,9 @@
+<div class="step">
+    <div class="icon">{{item.stepNumber}}</div>
+    <h3>{{item.title}}</h3>
+    <p>{{item.description}}
+      <a href="#"
+        *ngFor="let link of item.links"
+        [href]="link.url">{{link.text}}</a>
+    </p>
+</div>
