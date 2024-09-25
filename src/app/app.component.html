@@ -1,12 +1,17 @@
 
 
 
-<!--
+
 <section class="input-types birthday">
 
   <div class="wrapper">
     <label>Enter your birthday:</label>
     <input type="date" [(ngModel)]="birthday">
+
+    <ne-datepicker
+      dateIn="AD"
+      language="en"
+    ></ne-datepicker>
 
     <button (click)="calculateAge()">Calculate</button>
 
@@ -87,7 +92,7 @@
     </tr>
   </tbody>
 </table>
- -->
+
 
 
 <div class="bg-color">

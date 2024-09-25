@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { HeaderHoverBlockComponent } from './header-hover-block/header-hover-block.component';
 import { HowGetCardComponent } from './how-get-card/how-get-card.component';
 import { ListItemComponent } from './how-get-card/list-item/list-item.component';
+import { NepaliDatepickerModule } from 'nepali-datepicker-angular';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { ListItemComponent } from './how-get-card/list-item/list-item.component'
   imports: [
     BrowserModule,
     AppRoutingModule,
+    NepaliDatepickerModule,
     FormsModule,
   ],
   providers: [],
