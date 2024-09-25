@@ -14,6 +14,7 @@ import { HeaderHoverBlockComponent } from './header-hover-block/header-hover-blo
 import { HowGetCardComponent } from './how-get-card/how-get-card.component';
 import { ListItemComponent } from './how-get-card/list-item/list-item.component';
 import { NepaliDatepickerModule } from 'nepali-datepicker-angular';
+import { MaterialComponent } from './material/material.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { NepaliDatepickerModule } from 'nepali-datepicker-angular';
     CounterComponent,
     HeaderHoverBlockComponent,
     HowGetCardComponent,
-    ListItemComponent
+    ListItemComponent,
+    MaterialComponent
   ],
   imports: [
     BrowserModule,
