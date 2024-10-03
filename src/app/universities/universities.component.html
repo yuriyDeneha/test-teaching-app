@@ -1,0 +1,14 @@
+<p>universities amount: {{univercities.length}}</p>
+
+
+<ol>
+  <li
+    *ngFor="let university of univercities"
+  >
+    <span>{{university.name}}</span>
+    <a
+      target="_blank"
+      [href]="university.web_pages[0]"
+    >Link on website</a>
+  </li>
+</ol>

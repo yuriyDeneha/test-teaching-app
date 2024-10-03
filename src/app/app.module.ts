@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { importProvidersFrom, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -15,6 +15,10 @@ import { HowGetCardComponent } from './how-get-card/how-get-card.component';
 import { ListItemComponent } from './how-get-card/list-item/list-item.component';
 import { NepaliDatepickerModule } from 'nepali-datepicker-angular';
 import { MaterialComponent } from './material/material.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatNativeDateModule } from '@angular/material/core';
+import { UniversitiesComponent } from './universities/universities.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,20 +27,21 @@ import { MaterialComponent } from './material/material.component';
     FormComponent,
     PowerfulComponent,
     FooterComponent,
-    HeaderComponent,
     CounterComponent,
-    HeaderHoverBlockComponent,
     HowGetCardComponent,
     ListItemComponent,
-    MaterialComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NepaliDatepickerModule,
     FormsModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
   ],
-  providers: [],
+  providers: [
+    importProvidersFrom(MatNativeDateModule)
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

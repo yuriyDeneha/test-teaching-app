@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MaterialComponent } from './material/material.component';
+import { HeaderComponent } from './header/header.component';
+import { UniversitiesComponent } from './universities/universities.component';
 
 const routes: Routes = [
   {
@@ -8,8 +10,16 @@ const routes: Routes = [
     component: MaterialComponent
   },
   {
+    path: 'header',
+    component: HeaderComponent
+  },
+  {
+    path: 'universities',
+    component: UniversitiesComponent
+  },
+  {
     path: '',
-    redirectTo: '/material',
+    redirectTo: '/universities',
     pathMatch: 'full'
   }
 ];
