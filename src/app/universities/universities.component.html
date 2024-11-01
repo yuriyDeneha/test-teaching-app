@@ -1,5 +1,27 @@
-<p>universities amount: {{univercities.length}}</p>
+<p>Universities amount: {{univercities.length}}</p>
 
+
+<form>
+  <mat-form-field>
+    <mat-label>Select by country</mat-label>
+    <select matNativeControl required
+      name="country"
+      [(ngModel)]="country">
+      <option
+        *ngFor="let country of countries"
+        [value]="country.value">{{country.display}}</option>
+
+    </select>
+  </mat-form-field>
+
+  <p>
+  <button
+    (click)="getUnivercities()"
+    mat-raised-button
+    type="button">Reload univercities</button>
+  </p>
+
+</form>
 
 <ol>
   <li

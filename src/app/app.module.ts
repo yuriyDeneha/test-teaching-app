@@ -19,6 +19,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatNativeDateModule } from '@angular/material/core';
 import { UniversitiesComponent } from './universities/universities.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MarginPaddingComponent } from './margin-padding/margin-padding.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { HttpClientModule } from '@angular/common/http';
     CounterComponent,
     HowGetCardComponent,
     ListItemComponent,
+    MarginPaddingComponent,
   ],
   imports: [
     BrowserModule,

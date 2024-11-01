@@ -10,7 +10,8 @@ export class UnivercitiesService {
     private http: HttpClient
   ) { }
 
-  getUnivercities() {
-    return this.http.get('http://universities.hipolabs.com/search?country=ukraine');
+  getUnivercitiesByCountry(country: string = 'ukraine') {
+    console.log('getUnivercitiesByCountry: ' + country);
+    return this.http.get('http://universities.hipolabs.com/search?country=' + country);
   }
 }

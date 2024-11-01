@@ -1,0 +1,28 @@
+
+
+
+<div class="wrapper">
+  <form class="column form">
+    <h6>Форма:</h6>
+    <label>Введіть margin: {{margin}}</label>
+    <input type="text" placeholder="Введіть margin" name="margin"
+      [(ngModel)]="margin">
+
+    <label>Введіть padding:  {{padding}}</label>
+    <input type="text" placeholder="Введіть padding" name="padding"
+      [(ngModel)]="padding">
+  </form>
+
+  <div class="result">
+
+    <div class="block"
+      [style.padding]="padding"
+      [style.margin]="margin"
+      [style.padding]="padding"
+      [style.margin]="margin"
+      >
+      dkasgndsl nasd gnsdang lksdanglndsngds
+    </div>
+
+  </div>
+</div>
