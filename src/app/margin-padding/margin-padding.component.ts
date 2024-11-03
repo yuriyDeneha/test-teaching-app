@@ -7,6 +7,11 @@ import { Component } from '@angular/core';
 })
 export class MarginPaddingComponent {
 
-  margin: string;
-  padding: string;
+  person = {
+    firstName: '',
+    sureName: '',
+    age: '',
+    avatar: '',
+    aboutYourself: '',
+  }
 }

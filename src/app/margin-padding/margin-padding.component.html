@@ -3,25 +3,41 @@
 
 <div class="wrapper">
   <form class="column form">
-    <h6>Форма:</h6>
-    <label>Введіть margin: {{margin}}</label>
-    <input type="text" placeholder="Введіть margin" name="margin"
-      [(ngModel)]="margin">
+    <h6>Резюме:</h6>
+    <label>Введіть імя:</label>
+    <input type="text" placeholder="імя" name="margin"
+      [(ngModel)]="person.firstName">
 
-    <label>Введіть padding:  {{padding}}</label>
-    <input type="text" placeholder="Введіть padding" name="padding"
-      [(ngModel)]="padding">
+    <label>Введіть прізвище:</label>
+    <input type="text" placeholder="прізвище" name="padding"
+      [(ngModel)]="person.sureName">
+
+    <label>Який ваш вік:</label>
+    <input type="number" placeholder="вік" name="padding"
+      [(ngModel)]="person.age">
+
+    <label>Вставте посилання на вашу картинку:</label>
+    <input type="text" placeholder="Вставте посилання" name="padding"
+      [(ngModel)]="person.avatar">
+
+    <label>Напишіть про себе 5 речень:</label>
+    <textarea name="aboutYourself" placeholder=" про себе"
+      [(ngModel)]="person.aboutYourself"
+    ></textarea>
   </form>
 
   <div class="result">
 
-    <div class="block"
-      [style.padding]="padding"
-      [style.margin]="margin"
-      [style.padding]="padding"
-      [style.margin]="margin"
-      >
-      dkasgndsl nasd gnsdang lksdanglndsngds
+    <div class="block">
+      <h3>{{person.firstName}} {{person.sureName}}</h3>
+      <h6 *ngIf="person.age">
+        Вік: {{person.age}}</h6>
+      <img
+        *ngIf="person.avatar"
+        [src]="person.avatar" alt="Avatar">
+      <p>
+        {{person.aboutYourself}}
+      </p>
     </div>
 
   </div>
