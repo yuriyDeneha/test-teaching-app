@@ -20,6 +20,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { UniversitiesComponent } from './universities/universities.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MarginPaddingComponent } from './margin-padding/margin-padding.component';
+import { FormulaComponent } from './formula/formula.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { MarginPaddingComponent } from './margin-padding/margin-padding.componen
     HowGetCardComponent,
     ListItemComponent,
     MarginPaddingComponent,
+    FormulaComponent,
   ],
   imports: [
     BrowserModule,

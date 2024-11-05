@@ -1,0 +1,37 @@
+
+
+
+<div class="wrapper">
+  <form class="column form">
+    <h6>Площа:</h6>
+    <label>Введіть a:</label>
+    <input type="number" placeholder="a" name="a"
+      [(ngModel)]="a">
+
+    <label>Введіть b:</label>
+    <input type="number" placeholder="b" name="b"
+      [(ngModel)]="b">
+  </form>
+
+  <div class="result">
+
+    <div class="block">
+      <div class="child-block"
+        *ngIf="a && b"
+        [style.width]="a * 10 + 'px'"
+        [style.height]="b * 10 + 'px'"
+        >
+        <span class="a">{{a || 'a' }}</span>
+        <span class="b">{{b || 'b'}}</span>
+      </div>
+
+      <h6
+        *ngIf="a && b"
+        >Площа: {{area}}</h6>
+
+      <p *ngIf="!a">Для обрахунку площі - введіть A</p>
+      <p *ngIf="!b">Для обрахунку площі - введіть B</p>
+    </div>
+
+  </div>
+</div>
