@@ -28,9 +28,10 @@
     *ngFor="let university of univercities"
   >
     <span>{{university.name}}</span>
+    <span>{{university.country}}</span>
     <a
       target="_blank"
-      [href]="university.web_pages[0]"
+      [href]="university.webPages[0]"
     >Link on website</a>
   </li>
 </ol>

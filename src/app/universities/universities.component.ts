@@ -2,11 +2,12 @@ import { MatButtonModule } from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
 import { MatFormField, MatFormFieldModule } from '@angular/material/form-field';
 import { Component, inject, OnInit } from '@angular/core';
-import { UnivercitiesService } from '../services/univercities.service';
+import { UnivercitiesService } from './services/univercities.service';
 import { CommonModule } from '@angular/common';
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
+import { Univercity } from './models/univercity.model';
 
 @Component({
   selector: 'app-universities',
@@ -23,10 +24,7 @@ export class UniversitiesComponent implements OnInit {
 
   private _snackBar = inject(MatSnackBar)
 
-  univercities: {
-    name: string,
-    web_pages: string[]
-  }[] = [];
+  univercities: Univercity[] = [];
 
   country: string = 'poland';
 
@@ -45,7 +43,7 @@ export class UniversitiesComponent implements OnInit {
 
   getUnivercities() {
     this.univercitiesService.getUnivercitiesByCountry(this.country)
-      .subscribe((data: any) => {
+      .subscribe((data: Univercity[]) => {
         console.log(data);
 
         if (data.length === 0) {

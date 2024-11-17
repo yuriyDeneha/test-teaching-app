@@ -5,32 +5,51 @@
   <form class="column form">
     <h6>Площа:</h6>
     <label>Введіть a:</label>
-    <input type="number" placeholder="a" name="a"
+    <input type="number"
+      placeholder="a" name="a"
+      min="1" max="100"
       [(ngModel)]="a">
 
+    <p *ngIf="!a">Для обрахунку площі - введіть A</p>
+
     <label>Введіть b:</label>
-    <input type="number" placeholder="b" name="b"
+    <input type="number"
+      min="1" max="100"
+      placeholder="b" name="b"
       [(ngModel)]="b">
+
+
+    <p *ngIf="!b">Для обрахунку площі - введіть B</p>
+
+
+    <button (click)="calculateArea()"
+      [disabled]="!a || !b"
+      >Порахувати</button>
   </form>
 
   <div class="result">
 
     <div class="block">
       <div class="child-block"
-        *ngIf="a && b"
+        *ngIf="area"
         [style.width]="a * 10 + 'px'"
         [style.height]="b * 10 + 'px'"
         >
         <span class="a">{{a || 'a' }}</span>
         <span class="b">{{b || 'b'}}</span>
+
+        <span class="diagonal"
+          [style.transform]="'rotate(' + deg + 'deg)'"
+        ></span>
       </div>
 
       <h6
         *ngIf="a && b"
         >Площа: {{area}}</h6>
+      <h6
+        *ngIf="a && b"
+        >Діагональ: {{diagonal}}</h6>
 
-      <p *ngIf="!a">Для обрахунку площі - введіть A</p>
-      <p *ngIf="!b">Для обрахунку площі - введіть B</p>
     </div>
 
   </div>
