@@ -25,8 +25,10 @@ export class UniversitiesComponent implements OnInit {
   private _snackBar = inject(MatSnackBar)
 
   univercities: Univercity[] = [];
+  allUnivercities: Univercity[] = [];
 
   country: string = 'poland';
+  query: string = '';
 
   countries: { value: string, display: string }[] = [
     { value: 'ukraine', display: 'Ukraine' },
@@ -41,10 +43,20 @@ export class UniversitiesComponent implements OnInit {
     this.getUnivercities();
   }
 
+  filterByName(query: string) {
+    console.log('filterByName: ' + query);
+    this.univercities = this.allUnivercities
+      .filter(
+        (item: any) => item.name.toLowerCase().includes(query.toLowerCase())
+      );
+  }
+
   getUnivercities() {
     this.univercitiesService.getUnivercitiesByCountry(this.country)
       .subscribe((data: Univercity[]) => {
-        console.log(data);
+        // console.log(data);
+        // console.log(data.filter((item: any, index) => index > 0));
+
 
         if (data.length === 0) {
           this._snackBar.open('No universities found', 'Close', {
@@ -56,6 +68,7 @@ export class UniversitiesComponent implements OnInit {
           });
         }
         this.univercities = data;
+        this.allUnivercities = [...data];
       });
   }
 

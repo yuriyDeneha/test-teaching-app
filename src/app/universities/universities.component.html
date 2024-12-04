@@ -14,6 +14,13 @@
     </select>
   </mat-form-field>
 
+  <mat-form-field>
+    <mat-label>Start typing ... </mat-label>
+    <input matInput type="text" [(ngModel)]="query"
+      name="query"
+      (keydown)="filterByName(query)">
+  </mat-form-field>
+
   <p>
   <button
     (click)="getUnivercities()"

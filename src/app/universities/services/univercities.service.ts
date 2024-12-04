@@ -13,7 +13,7 @@ export class UnivercitiesService {
   ) { }
 
   getUnivercitiesByCountry(country: string = 'ukraine'): Observable<Univercity[]> {
-    console.log('getUnivercitiesByCountry: ' + country);
+    // console.log('getUnivercitiesByCountry: ' + country);
     return this.http.get<Univercity[]>('http://universities.hipolabs.com/search?country=' + country)
       .pipe(
         map((data: any[]) => {
