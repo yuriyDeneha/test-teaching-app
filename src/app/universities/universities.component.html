@@ -37,8 +37,10 @@
     <span>{{university.name}}</span>
     <span>{{university.country}}</span>
     <a
+      *ngIf="university?.webPages?.length"
       target="_blank"
       [href]="university.webPages[0]"
     >Link on website</a>
+    <button (click)="deleteUnivercity(university.id)">Delete</button>
   </li>
 </ol>
