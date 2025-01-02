@@ -23,29 +23,27 @@ import { MarginPaddingComponent } from './margin-padding/margin-padding.componen
 import { FormulaComponent } from './formula/formula.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    MoreServicesComponent,
-    FormComponent,
-    PowerfulComponent,
-    FooterComponent,
-    CounterComponent,
-    HowGetCardComponent,
-    ListItemComponent,
-    MarginPaddingComponent,
-    FormulaComponent,
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    NepaliDatepickerModule,
-    FormsModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
-  ],
-  providers: [
-    importProvidersFrom(MatNativeDateModule)
-  ],
-  bootstrap: [AppComponent]
+    declarations: [AppComponent],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        NepaliDatepickerModule,
+        FormsModule,
+        HttpClientModule,
+        BrowserAnimationsModule,
+        MoreServicesComponent,
+        FormComponent,
+        PowerfulComponent,
+        FooterComponent,
+        CounterComponent,
+        HowGetCardComponent,
+        ListItemComponent,
+        MarginPaddingComponent,
+        FormulaComponent
+    ],
+    providers: [
+        importProvidersFrom(MatNativeDateModule)
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

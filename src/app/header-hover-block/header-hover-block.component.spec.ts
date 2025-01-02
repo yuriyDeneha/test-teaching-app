@@ -8,8 +8,8 @@ describe('HeaderHoverBlockComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HeaderHoverBlockComponent ]
-    })
+    imports: [HeaderHoverBlockComponent]
+})
     .compileComponents();
 
     fixture = TestBed.createComponent(HeaderHoverBlockComponent);

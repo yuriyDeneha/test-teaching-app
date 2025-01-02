@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
+import { NgIf, DatePipe } from '@angular/common';
 
 @Component({
-  selector: 'app-counter',
-  templateUrl: './counter.component.html',
-  styleUrls: ['./counter.component.css']
+    selector: 'app-counter',
+    templateUrl: './counter.component.html',
+    styleUrls: ['./counter.component.css'],
+    standalone: true,
+    imports: [NgIf, DatePipe]
 })
 export class CounterComponent {
 

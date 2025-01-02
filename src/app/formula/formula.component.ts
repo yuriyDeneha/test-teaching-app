@@ -1,10 +1,14 @@
 import { Component } from '@angular/core';
 import { Person, Post, Posylka, Transport, Viddilenya } from './post.model';
+import { NgIf } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-formula',
-  templateUrl: './formula.component.html',
-  styleUrls: ['./formula.component.scss']
+    selector: 'app-formula',
+    templateUrl: './formula.component.html',
+    styleUrls: ['./formula.component.scss'],
+    standalone: true,
+    imports: [FormsModule, NgIf]
 })
 export class FormulaComponent {
 

@@ -8,8 +8,8 @@ describe('MarginPaddingComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MarginPaddingComponent ]
-    })
+    imports: [MarginPaddingComponent]
+})
     .compileComponents();
 
     fixture = TestBed.createComponent(MarginPaddingComponent);
