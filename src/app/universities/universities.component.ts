@@ -9,6 +9,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { Univercity } from './models/univercity.model';
 import { ApiService } from './services/api.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-universities',
@@ -41,11 +42,28 @@ export class UniversitiesComponent implements OnInit {
   constructor(
     private univercitiesService: UnivercitiesService,
     private apiService: ApiService,
+    private router: Router,
   ) { }
 
   ngOnInit() {
     // this.getUnivercities();
     this.getLocalUnivertisies();
+
+    // this.apiService.createUnivercity({
+    //   "domains": [
+    //     "ahe.edu.pl"
+    //   ],
+    //   "stateProvince": null,
+    //   "alphaTwoCode": "UA",
+    //   "country": "Ukraine",
+    //   "name": "Academy of Mystectm",
+    //   "webPages": [
+    //     "http://www.ahe.edu.pl/"
+    //   ],
+    //   "id": 999
+    // }).subscribe((data) => {
+    //   console.log('createUnivercity: ', data);
+    // });
   }
 
   getLocalUnivertisies() {
@@ -53,6 +71,10 @@ export class UniversitiesComponent implements OnInit {
       .subscribe((data: Univercity[]) => {
         console.log(data);
         this.univercities = data;
+
+        this.univercities.sort((a, b) => {
+          return a.id - b.id;
+        });
         this.allUnivercities = [...data];
       });
   }
@@ -94,4 +116,7 @@ export class UniversitiesComponent implements OnInit {
       });
   }
 
+  openCreatePage() {
+    this.router.navigate(['/universities/create']);
+  }
 }

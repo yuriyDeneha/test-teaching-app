@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Univercity } from '../models/univercity.model';
 
 @Injectable({
   providedIn: 'root',
@@ -10,17 +11,16 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
 
-
-  createUnivercity(univercity: any): Observable<any> {
-    return this.http.post(`${this.apiUrl}/univercities`, univercity);
+  getUnivercitys(): Observable<Univercity[]> {
+    return this.http.get<Univercity[]>(`${this.apiUrl}/univercities`);
   }
 
-  getUnivercitys(): Observable<any> {
-    return this.http.get(`${this.apiUrl}/univercities`);
+  createUnivercity(univercity: Univercity): Observable<Univercity> {
+    return this.http.post<Univercity>(`${this.apiUrl}/univercities`, univercity);
   }
 
-  updateUnivercity(id: number, univercity: any): Observable<any> {
-    return this.http.put(`${this.apiUrl}/univercities/${id}`, univercity);
+  updateUnivercity(id: number, univercity: Univercity): Observable<Univercity> {
+    return this.http.put<Univercity>(`${this.apiUrl}/univercities/${id}`, univercity);
   }
 
   deleteUnivercity(id: number): Observable<any> {

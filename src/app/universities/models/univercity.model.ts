@@ -1,4 +1,5 @@
 export class Univercity {
+  id: number;
   name: string;
   alphaTwoCode: string;
   domains: string[];
@@ -7,6 +8,7 @@ export class Univercity {
   webPages: string[];
 
   constructor(entity: Partial<Univercity>) {
+    this.id = entity.id;
     this.name = entity.name;
     this.alphaTwoCode = entity.alphaTwoCode;
     this.domains = entity.domains;

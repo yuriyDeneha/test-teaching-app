@@ -5,6 +5,7 @@ import { HeaderComponent } from './header/header.component';
 import { UniversitiesComponent } from './universities/universities.component';
 import { MarginPaddingComponent } from './margin-padding/margin-padding.component';
 import { FormulaComponent } from './formula/formula.component';
+import { CreateUnivercityComponent } from './universities/create-univercity/create-univercity.component';
 
 const routes: Routes = [
   {
@@ -17,7 +18,21 @@ const routes: Routes = [
   },
   {
     path: 'universities',
-    component: UniversitiesComponent
+    children: [
+      {
+        path: 'list',
+        component: UniversitiesComponent
+      },
+      {
+        path: 'create',
+        component: CreateUnivercityComponent
+      },
+      {
+        path: '',
+        redirectTo: 'list',
+        pathMatch: 'full'
+      }
+    ]
   },
   {
     path: 'margin-padding',

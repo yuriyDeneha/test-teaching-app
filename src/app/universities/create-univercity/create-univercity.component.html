@@ -1,0 +1,74 @@
+  <button
+    (click)="openListPage()"
+    mat-raised-button
+    type="button">Go back to list</button>
+<form [formGroup]="universityForm" (ngSubmit)="onSubmit()" class="form-container">
+  <mat-form-field appearance="fill" class="form-field">
+    <mat-label>ID</mat-label>
+    <input matInput id="id" formControlName="id" type="number" />
+    <mat-error *ngIf="universityForm.get('id')?.hasError('required')">
+      ID is required.
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="form-field">
+    <mat-label>Name</mat-label>
+    <input matInput id="name" formControlName="name" type="text" />
+    <mat-error *ngIf="universityForm.get('name')?.hasError('required')">
+      Name is required.
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="form-field">
+    <mat-label>Alpha Two Code</mat-label>
+    <input matInput id="alphaTwoCode" formControlName="alphaTwoCode" type="text" />
+    <mat-error *ngIf="universityForm.get('alphaTwoCode')?.hasError('required')">
+      Alpha Two Code is required.
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="form-field">
+    <mat-label>Domains</mat-label>
+    <textarea
+      matInput
+      id="domains"
+      formControlName="domains"
+      placeholder="Enter domains separated by commas"
+    ></textarea>
+    <mat-error *ngIf="universityForm.get('domains')?.hasError('required')">
+      At least one domain is required.
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="form-field">
+    <mat-label>State/Province</mat-label>
+    <input matInput id="stateProvince" formControlName="stateProvince" type="text" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="form-field">
+    <mat-label>Country</mat-label>
+    <input matInput id="country" formControlName="country" type="text" />
+    <mat-error *ngIf="universityForm.get('country')?.hasError('required')">
+      Country is required.
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="form-field">
+    <mat-label>Web Pages</mat-label>
+    <textarea
+      matInput
+      id="webPages"
+      formControlName="webPages"
+      placeholder="Enter web pages separated by commas"
+    ></textarea>
+    <mat-error *ngIf="universityForm.get('webPages')?.hasError('required')">
+      At least one web page is required.
+    </mat-error>
+  </mat-form-field>
+
+  <div class="button-container">
+    <button mat-raised-button color="primary" type="submit">
+      Submit
+    </button>
+  </div>
+</form>

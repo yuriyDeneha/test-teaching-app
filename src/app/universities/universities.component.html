@@ -26,14 +26,19 @@
     (click)="getUnivercities()"
     mat-raised-button
     type="button">Reload univercities</button>
+  <button
+    (click)="openCreatePage()"
+    mat-raised-button
+    type="button">Add univercity</button>
   </p>
 
 </form>
 
-<ol>
+<ul>
   <li
     *ngFor="let university of univercities"
   >
+    <span>{{university.id}}</span>
     <span>{{university.name}}</span>
     <span>{{university.country}}</span>
     <a
@@ -43,4 +48,4 @@
     >Link on website</a>
     <button (click)="deleteUnivercity(university.id)">Delete</button>
   </li>
-</ol>
+</ul>

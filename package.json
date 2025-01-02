@@ -20,6 +20,7 @@
     "@angular/platform-browser": "^18.2.13",
     "@angular/platform-browser-dynamic": "^18.2.13",
     "@angular/router": "^18.2.13",
+    "json-server": "^1.0.0-beta.3",
     "nepali-datepicker-angular": "^1.1.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
