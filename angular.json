@@ -61,10 +61,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "fuel-website:build:production"
+              "buildTarget": "fuel-website:build:production"
             },
             "development": {
-              "browserTarget": "fuel-website:build:development"
+              "buildTarget": "fuel-website:build:development"
             }
           },
           "options": {
@@ -75,7 +75,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "fuel-website:build"
+            "buildTarget": "fuel-website:build"
           }
         },
         "test": {
