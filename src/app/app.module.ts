@@ -18,18 +18,15 @@ import { MaterialComponent } from './material/material.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatNativeDateModule } from '@angular/material/core';
 import { UniversitiesComponent } from './universities/universities.component';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { MarginPaddingComponent } from './margin-padding/margin-padding.component';
 import { FormulaComponent } from './formula/formula.component';
 
-@NgModule({
-    declarations: [AppComponent],
-    imports: [
-        BrowserModule,
+@NgModule({ declarations: [AppComponent],
+    bootstrap: [AppComponent], imports: [BrowserModule,
         AppRoutingModule,
         NepaliDatepickerModule,
         FormsModule,
-        HttpClientModule,
         BrowserAnimationsModule,
         MoreServicesComponent,
         FormComponent,
@@ -39,11 +36,8 @@ import { FormulaComponent } from './formula/formula.component';
         HowGetCardComponent,
         ListItemComponent,
         MarginPaddingComponent,
-        FormulaComponent
-    ],
-    providers: [
-        importProvidersFrom(MatNativeDateModule)
-    ],
-    bootstrap: [AppComponent]
-})
+        FormulaComponent], providers: [
+        importProvidersFrom(MatNativeDateModule),
+        provideHttpClient(withInterceptorsFromDi())
+    ] })
 export class AppModule { }
