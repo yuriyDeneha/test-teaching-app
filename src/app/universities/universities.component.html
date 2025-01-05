@@ -46,6 +46,7 @@
       target="_blank"
       [href]="university.webPages[0]"
     >Link on website</a>
-    <button (click)="deleteUnivercity(university.id)">Delete</button>
+    <button  mat-raised-button (click)="openEditPage(university.id)">Edit</button>
+    <button mat-raised-button (click)="deleteUnivercity(university.id)">Delete</button>
   </li>
 </ul>

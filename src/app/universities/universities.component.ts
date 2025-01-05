@@ -67,7 +67,7 @@ export class UniversitiesComponent implements OnInit {
   }
 
   getLocalUnivertisies() {
-    this.apiService.getUnivercitys()
+    this.apiService.getUnivercities()
       .subscribe((data: Univercity[]) => {
         console.log(data);
         this.univercities = data;
@@ -118,5 +118,9 @@ export class UniversitiesComponent implements OnInit {
 
   openCreatePage() {
     this.router.navigate(['/universities/create']);
+  }
+
+  openEditPage(id: number) {
+    this.router.navigate(['/universities/edit/' + id]);
   }
 }

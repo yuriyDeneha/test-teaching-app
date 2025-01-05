@@ -28,6 +28,10 @@ const routes: Routes = [
         component: CreateUnivercityComponent
       },
       {
+        path: 'edit/:id',
+        component: CreateUnivercityComponent
+      },
+      {
         path: '',
         redirectTo: 'list',
         pathMatch: 'full'

@@ -1201,17 +1201,17 @@
       "id": "100"
     },
     {
+      "id": "101",
+      "name": "Medicall Academy Karol Marcinkowski in Poznan",
+      "alphaTwoCode": "PL",
       "domains": [
         "usoms.poznan.pl"
       ],
       "stateProvince": null,
-      "alphaTwoCode": "PL",
       "country": "Poland",
-      "name": "Medical Academy Karol Marcinkowski in Poznan",
       "webPages": [
         "http://www.usoms.poznan.pl/"
-      ],
-      "id": "101"
+      ]
     },
     {
       "domains": [
@@ -1656,7 +1656,7 @@
       "id": "135"
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Lvvi Univercoty",
       "alphaTwoCode": "UA",
       "domains": "univercity.lviv.com",
@@ -1665,13 +1665,22 @@
       "webPages": "univercity.lviv.com"
     },
     {
-      "id": 1,
+      "id": "1",
       "name": "Inavofrankivsk King Daniel Univecoty",
       "alphaTwoCode": "IF",
       "domains": "ffsfsdf",
       "stateProvince": "UA",
       "country": "Ukraine",
       "webPages": "ffsfsdf"
+    },
+    {
+      "id": "1001",
+      "name": "Olesha univercity",
+      "alphaTwoCode": "OL",
+      "domains": "sagsdagsdag",
+      "stateProvince": "Львівська область — Lviv oblast",
+      "country": "Ukraine",
+      "webPages": "gdgasdgsdags"
     }
   ]
 }
